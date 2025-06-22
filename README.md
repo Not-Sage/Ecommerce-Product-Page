@@ -39,8 +39,8 @@ Users should be able to:
 
 ### 🔗 Links
 
-- 🔧 **Solution URL:** [View Code](https://your-solution-url.com)
-- 🌐 **Live Site:** [Visit Website](https://your-live-site-url.com)
+- 🔧 **Solution URL:** [View Code](https://www.frontendmentor.io/solutions/responsive-e-commerce-product-page-with-sass-and-js-91Vii07jhk)
+- 🌐 **Live Site:** [Visit Website](https://sage-page.vercel.app/)
 
 ---
 
