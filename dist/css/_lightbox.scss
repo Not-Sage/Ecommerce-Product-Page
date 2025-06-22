@@ -1,0 +1,81 @@
+/* Lightbox overlay */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Show lightbox */
+.lightbox.active {
+  display: flex;
+}
+
+/* Main image area */
+.lightbox-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.lightbox-content img {
+  max-height: 60vh;
+  border-radius: 12px;
+}
+
+/* Navigation arrows */
+.prev, .next {
+  background-color: white;
+  border: none;
+  height: 60px; width: 60px;
+  padding: 12px;
+  margin: 0 -2rem;
+  font-size: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100000;
+
+  &:hover{
+    color: $Orange;
+  }
+}
+
+/* Thumbnails */
+.thumbnails {
+  display: flex;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.thumbnails img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.thumbnails img:hover, .thumbnails img.active {
+  opacity: 1;
+  border: 2px solid $Orange;
+}
+
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+
+  &:hover{
+    color: $Orange;
+  }
+}

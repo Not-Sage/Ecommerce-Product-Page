@@ -1,0 +1,22 @@
+main{
+    display: flex;
+    margin: 2rem 0;
+
+    @media screen and (max-width:768px){
+        width: 100vw;
+    }
+
+    .main-container-element{
+        max-width: 50%;
+    }
+
+    @media screen and (max-width:768px) {
+        flex-direction: column;
+        margin: 0;
+
+        
+        .main-container-element{
+            max-width: 100%;
+        }
+    }
+}

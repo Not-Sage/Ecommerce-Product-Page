@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="stylesheet" href="dist/css/style.this.css" />
+    <style></style>
+  </head>
+  <body>
+    <div id="cart-dropdown" class="cart-dropdown hidden">
+      <h4>Cart</h4>
+      <div id="cart-content" class="cart-content empty">
+        <p>Your cart is empty.</p>
+      </div>
+      <div class="checkout-container">
+        <button class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close" onclick="closeLightbox()">&times;</span>
+
+      <div class="lightbox-content">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <img
+          id="lightbox-image"
+          src="images/image-product-1.jpg"
+          alt="Product Enlarged"
+        />
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+
+      <div class="thumbnails">
+        <img src="images/image-product-1.jpg" onclick="currentSlide(0)" />
+        <img src="images/image-product-2.jpg" onclick="currentSlide(1)" />
+        <img src="images/image-product-3.jpg" onclick="currentSlide(2)" />
+        <img src="images/image-product-4.jpg" onclick="currentSlide(3)" />
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Hero Section >_< -->
+
+      <header class="head-container">
+        <div class="head-container-elements navigation">
+          <div class="logo">
+            <div class="mobile-menu-icon" onclick="toggleMobileNav()">
+              <img src="images/icon-menu.svg" alt="menu icon" />
+            </div>
+            <img src="images/logo.svg" alt="Logo" />
+          </div>
+          <div class="head-items-container">
+            <ul>
+              <li>Collections</li>
+              <li>Men</li>
+              <li>Women</li>
+              <li>About</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+        </div>
+        <div class="head-container-elements profile">
+          <div class="img-cart" onclick="toggleCart()">
+            <img src="images/icon-cart.svg" alt="" />
+          </div>
+          <div class="img-avatar">
+            <img src="images/image-avatar.png" alt="" />
+          </div>
+        </div>
+      </header>
+
+      <div id="mobile-nav" class="mobile-nav hidden">
+        <button class="close-btn" onclick="toggleMobileNav()">✕</button>
+        <ul>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="line"></div>
+
+      <!-- Main Section o_O -->
+
+      <main class="main-container">
+        <div class="main-container-element image-section">
+          <div class="main-image">
+            <button class="prev" onclick="prev()">&#10094;</button>
+            <img
+              src="images/image-product-1.jpg"
+              onclick="openLightbox()"
+              id="main-image"
+              alt=""
+            />
+            <button class="next" onclick="next()">&#10095;</button>
+          </div>
+          <div class="thumbnail-image">
+            <div class="imgs">
+              <img
+                src="images/image-product-1-thumbnail.jpg"
+                alt=""
+                onclick="openLightbox()"
+              />
+            </div>
+            <div class="imgs">
+              <img
+                src="images/image-product-2-thumbnail.jpg"
+                alt=""
+                onclick="openLightbox()"
+              />
+            </div>
+            <div class="imgs">
+              <img
+                src="images/image-product-3-thumbnail.jpg"
+                alt=""
+                onclick="openLightbox()"
+              />
+            </div>
+            <div class="imgs">
+              <img
+                src="images/image-product-4-thumbnail.jpg"
+                alt=""
+                onclick="openLightbox()"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="main-container-element info-section">
+          <h4>Sneaker Company</h4>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole. they'll withstand everything
+            the weather can offer.
+          </p>
+          <div class="price">
+            <span>$125.00</span>
+            <span class="discount">50%</span>
+          </div>
+          <p class="pre-price">$250.00</p>
+          <div class="cart">
+            <div class="change-quantity">
+              <button id="decrease">
+                <img src="images/icon-minus.svg" alt="" />
+              </button>
+              <label for="" class="change-quantity-items btn" id="label"
+                >0</label
+              >
+              <button id="increase">
+                <img src="images/icon-plus.svg" alt="" />
+              </button>
+            </div>
+            <div class="change-quantity add-to-cart">
+              <button onclick="addToCart()">
+                <img src="images/icon-cart.svg" alt="" />
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Attribution :> -->
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/Not-sage">Sage</a>.
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
